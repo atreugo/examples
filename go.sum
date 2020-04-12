@@ -1,4 +1,6 @@
 github.com/atreugo/httptest v0.0.0-20200412154832-cadfdce44f09/go.mod h1:XDKwWecJlvgIyHUYK+Yhvga2deYfMdRVQ6SoqkiTAxM=
+github.com/atreugo/middlewares v0.0.0-20200412161711-be9d6f628d76 h1:aq5o15Ty+K/g8aeUr8wXAJjLwH2O0mW/LGk3GBw6VkM=
+github.com/atreugo/middlewares v0.0.0-20200412161711-be9d6f628d76/go.mod h1:DAvizKQOu6c4FIPTYvRUtUvIuhQowCzYhJ1ehOizqMI=
 github.com/atreugo/websocket v0.0.0-20200412155534-7c2a35b0f2d3 h1:qIL5HoQbZXVHeOx4LzDK7mmHFZ6kypD6LseMxykh1v8=
 github.com/atreugo/websocket v0.0.0-20200412155534-7c2a35b0f2d3/go.mod h1:UFNeoP5R6d8v8rAkfSlb6YYJyIQfg7z97wCBt4aD9TI=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
@@ -10,6 +12,7 @@ github.com/fasthttp/router v1.0.2/go.mod h1:Myk/ofrwtfiLSCIfbE44+e+PyP3mR6JhZg3A
 github.com/fasthttp/websocket v1.4.2 h1:AU/zSiIIAuJjBMf5o+vO0syGOnEfvZRu40xIhW/3RuM=
 github.com/fasthttp/websocket v1.4.2/go.mod h1:smsv/h4PBEBaU0XDTY5UwJTpZv69fQ0FfcLJr21mA6Y=
 github.com/google/gofuzz v1.0.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/M65Eg=
+github.com/google/uuid v1.1.1/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/json-iterator/go v1.1.9 h1:9yzud/Ht36ygwatGx56VwCZtlI/2AD15T1X2sjSuGns=
 github.com/json-iterator/go v1.1.9/go.mod h1:KdQUCv79m/52Kvf8AW2vK1V8akMuk1QjK/uOdHXbAo4=
 github.com/klauspost/compress v1.8.2 h1:Bx0qjetmNjdFXASH02NSAREKpiaDwkO1DRZ3dV2KCcs=

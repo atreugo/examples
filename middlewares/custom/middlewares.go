@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/savsgio/atreugo/v11"
-	"github.com/savsgio/go-logger"
+	"github.com/savsgio/go-logger/v2"
 )
 
 func beforeGlobal(ctx *atreugo.RequestCtx) error {

@@ -26,12 +26,13 @@ func init() {
 	var provider session.Provider
 	var err error
 
+	encoder := session.MSGPEncode
+	decoder := session.MSGPDecode
+
 	switch *providerName {
 	case "memory":
 		provider, err = memory.New(memory.Config{})
 	case "redis":
-		// encoder = session.MSGPEncode
-		// decoder = session.MSGPDecode
 		provider, err = redis.New(redis.Config{
 			KeyPrefix:   "session",
 			Addr:        "127.0.0.1:6379",
@@ -39,8 +40,6 @@ func init() {
 			IdleTimeout: 30 * time.Second,
 		})
 	case "memcache":
-		// encoder = session.MSGPEncode
-		// decoder = session.MSGPDecode
 		provider, err = memcache.New(memcache.Config{
 			KeyPrefix: "session",
 			ServerList: []string{
@@ -50,9 +49,13 @@ func init() {
 		})
 
 	case "mysql":
+		encoder = session.Base64Encode
+		decoder = session.Base64Decode
 		cfg := mysql.NewConfigWith("127.0.0.1", 3306, "root", "session", "test", "session")
 		provider, err = mysql.New(cfg)
 	case "postgre":
+		encoder = session.Base64Encode
+		decoder = session.Base64Decode
 		cfg := postgre.NewConfigWith("127.0.0.1", 5432, "postgres", "session", "test", "session")
 		provider, err = postgre.New(cfg)
 	case "sqlite3":
@@ -67,8 +70,8 @@ func init() {
 	}
 
 	cfg := session.NewDefaultConfig()
-	// cfg.EncodeFunc = encoder
-	// cfg.DecodeFunc = decoder
+	cfg.EncodeFunc = encoder
+	cfg.DecodeFunc = decoder
 	serverSession = session.New(cfg)
 
 	if err = serverSession.SetProvider(provider); err != nil {

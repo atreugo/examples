@@ -7,7 +7,6 @@ import (
 	"github.com/savsgio/atreugo/v11"
 )
 
-// index handler
 func indexHandler(ctx *atreugo.RequestCtx) error {
 	html := "<h2>Welcome to use session, you should request to the: </h2>"
 
@@ -24,26 +23,30 @@ func indexHandler(ctx *atreugo.RequestCtx) error {
 	return ctx.HTTPResponse(html)
 }
 
-// set handler
-func setHandler(ctx *atreugo.RequestCtx) error {
+func setHandler(ctx *atreugo.RequestCtx) (err error) {
 	store, err := serverSession.Get(ctx)
 	if err != nil {
 		return err
 	}
-	defer serverSession.Save(ctx, store)
+
+	defer func() {
+		err = serverSession.Save(ctx, store)
+	}()
 
 	store.Set("foo", "bar")
 
 	return ctx.TextResponse(fmt.Sprintf("Session SET: foo='%s' --> OK", store.Get("foo").(string)))
 }
 
-// get handler
-func getHandler(ctx *atreugo.RequestCtx) error {
+func getHandler(ctx *atreugo.RequestCtx) (err error) {
 	store, err := serverSession.Get(ctx)
 	if err != nil {
 		return err
 	}
-	defer serverSession.Save(ctx, store)
+
+	defer func() {
+		err = serverSession.Save(ctx, store)
+	}()
 
 	val := store.Get("foo")
 	if val == nil {
@@ -53,13 +56,15 @@ func getHandler(ctx *atreugo.RequestCtx) error {
 	return ctx.TextResponse(fmt.Sprintf("Session GET: foo='%s'", val.(string)))
 }
 
-// delete handler
-func deleteHandler(ctx *atreugo.RequestCtx) error {
+func deleteHandler(ctx *atreugo.RequestCtx) (err error) {
 	store, err := serverSession.Get(ctx)
 	if err != nil {
 		return err
 	}
-	defer serverSession.Save(ctx, store)
+
+	defer func() {
+		err = serverSession.Save(ctx, store)
+	}()
 
 	store.Delete("foo")
 
@@ -71,13 +76,15 @@ func deleteHandler(ctx *atreugo.RequestCtx) error {
 	return ctx.TextResponse("Session DELETE: foo --> ERROR")
 }
 
-// get all handler
-func getAllHandler(ctx *atreugo.RequestCtx) error {
+func getAllHandler(ctx *atreugo.RequestCtx) (err error) {
 	store, err := serverSession.Get(ctx)
 	if err != nil {
 		return err
 	}
-	defer serverSession.Save(ctx, store)
+
+	defer func() {
+		err = serverSession.Save(ctx, store)
+	}()
 
 	store.Set("foo1", "bar1")
 	store.Set("foo2", 2)
@@ -91,13 +98,15 @@ func getAllHandler(ctx *atreugo.RequestCtx) error {
 	return ctx.TextResponse("Session GetAll: See the OS console!")
 }
 
-// flush handle
-func flushHandler(ctx *atreugo.RequestCtx) error {
+func flushHandler(ctx *atreugo.RequestCtx) (err error) {
 	store, err := serverSession.Get(ctx)
 	if err != nil {
 		return err
 	}
-	defer serverSession.Save(ctx, store)
+
+	defer func() {
+		err = serverSession.Save(ctx, store)
+	}()
 
 	store.Flush()
 
@@ -108,7 +117,6 @@ func flushHandler(ctx *atreugo.RequestCtx) error {
 	return ctx.TextResponse("Session FLUSH: See the OS console!")
 }
 
-// destroy handle
 func destroyHandler(ctx *atreugo.RequestCtx) error {
 	err := serverSession.Destroy(ctx)
 	if err != nil {
@@ -118,13 +126,15 @@ func destroyHandler(ctx *atreugo.RequestCtx) error {
 	return ctx.TextResponse("Session DESTROY --> OK")
 }
 
-// get sessionID handle
-func sessionIDHandler(ctx *atreugo.RequestCtx) error {
+func sessionIDHandler(ctx *atreugo.RequestCtx) (err error) {
 	store, err := serverSession.Get(ctx)
 	if err != nil {
 		return err
 	}
-	defer serverSession.Save(ctx, store)
+
+	defer func() {
+		err = serverSession.Save(ctx, store)
+	}()
 
 	sessionID := store.GetSessionID()
 	ctx.SetBodyString("Session: Current session id: ")
@@ -133,7 +143,6 @@ func sessionIDHandler(ctx *atreugo.RequestCtx) error {
 	return nil
 }
 
-// regenerate handler
 func regenerateHandler(ctx *atreugo.RequestCtx) error {
 	if err := serverSession.Regenerate(ctx); err != nil {
 		return err
@@ -150,7 +159,6 @@ func regenerateHandler(ctx *atreugo.RequestCtx) error {
 	return nil
 }
 
-// get expiration handler
 func getExpirationHandler(ctx *atreugo.RequestCtx) error {
 	store, err := serverSession.Get(ctx)
 	if err != nil {
@@ -165,13 +173,15 @@ func getExpirationHandler(ctx *atreugo.RequestCtx) error {
 	return nil
 }
 
-// set expiration handler
-func setExpirationHandler(ctx *atreugo.RequestCtx) error {
+func setExpirationHandler(ctx *atreugo.RequestCtx) (err error) {
 	store, err := serverSession.Get(ctx)
 	if err != nil {
 		return err
 	}
-	defer serverSession.Save(ctx, store)
+
+	defer func() {
+		err = serverSession.Save(ctx, store)
+	}()
 
 	err = store.SetExpiration(30 * time.Second)
 	if err != nil {

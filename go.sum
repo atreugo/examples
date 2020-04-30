@@ -1,8 +1,8 @@
 github.com/atreugo/httptest v0.0.0-20200412154832-cadfdce44f09/go.mod h1:XDKwWecJlvgIyHUYK+Yhvga2deYfMdRVQ6SoqkiTAxM=
 github.com/atreugo/middlewares v0.0.0-20200419175101-a8cd5dad221d h1:xWeJGT7VcgRvn4HSSwmoC45OWfOeDxQldSsFmRIguGE=
 github.com/atreugo/middlewares v0.0.0-20200419175101-a8cd5dad221d/go.mod h1:ZgGXyWdjyU6UdQAj01njO/Y7GozPflHV+QVAPIsBgJA=
-github.com/atreugo/session v0.0.0-20200428152754-641555dbdaea h1:WtmHe+jHlSschEONmO15Zr8Ii5grn4+oL+Hzs0qS43E=
-github.com/atreugo/session v0.0.0-20200428152754-641555dbdaea/go.mod h1:dF02yVQWf7+CKtGAw8a9yy4zHqVwAwoqU5A0itArYjY=
+github.com/atreugo/session v0.0.0-20200430120909-5eb895bd5dcc h1:Gs0J4RbWOpuRakU9BAR9eCRoi39IX4QGa0q9zrADlvM=
+github.com/atreugo/session v0.0.0-20200430120909-5eb895bd5dcc/go.mod h1:20nNE94ThdOskrZmbG1oWvkAqqFpiEa8tNshMUj6GcM=
 github.com/atreugo/websocket v1.0.0 h1:K6TyEs+44cwdAREtn+Sdw5IxzimcLpblXV2FU22n7qU=
 github.com/atreugo/websocket v1.0.0/go.mod h1:+vvVaZdz/kzhyuQlnZ139cnPbWyQiwgHUNcG4BGDzhM=
 github.com/bradfitz/gomemcache v0.0.0-20190913173617-a41fca850d0b h1:L/QXpzIa3pOvUGt1D1lA5KjYhPBAN/3iWdP7xeFS9F0=
@@ -15,8 +15,8 @@ github.com/fasthttp/router v1.0.2/go.mod h1:Myk/ofrwtfiLSCIfbE44+e+PyP3mR6JhZg3A
 github.com/fasthttp/router v1.0.3/go.mod h1:ID3ss22SL9zubP2jjzl6WayHb9/CQq54pQY+uYVnKOw=
 github.com/fasthttp/router v1.0.4 h1:boxeE3vbutHTNAqQsUTm3IdRTjaQ5uFoRrGC+2Y1iwY=
 github.com/fasthttp/router v1.0.4/go.mod h1:3ZGZormG7E+VbnYeToF+zmcF4oBGcAKOD8a8XL+fOZo=
-github.com/fasthttp/session/v2 v2.0.1 h1:9AcFjtRY7eFsuPxzzAJofvh1QxQabVWfxZHa1WndUFM=
-github.com/fasthttp/session/v2 v2.0.1/go.mod h1:u9Z1Tn1V9XLAZKHM6bjHFsinVC5/KEn2M1rllhcjFgc=
+github.com/fasthttp/session/v2 v2.0.2 h1:hoCr7xM+wXjkp0uwFna9G0k9ZUZNDUM5/SzgAlXqjvw=
+github.com/fasthttp/session/v2 v2.0.2/go.mod h1:u9Z1Tn1V9XLAZKHM6bjHFsinVC5/KEn2M1rllhcjFgc=
 github.com/fasthttp/websocket v1.4.2 h1:AU/zSiIIAuJjBMf5o+vO0syGOnEfvZRu40xIhW/3RuM=
 github.com/fasthttp/websocket v1.4.2/go.mod h1:smsv/h4PBEBaU0XDTY5UwJTpZv69fQ0FfcLJr21mA6Y=
 github.com/fsnotify/fsnotify v1.4.7/go.mod h1:jwhsz4b93w/PPRr/qN1Yymfu8t87LnFCMoQvtojpjFo=

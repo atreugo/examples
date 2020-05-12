@@ -6,25 +6,25 @@ import (
 )
 
 func beforeGlobal(ctx *atreugo.RequestCtx) error {
-	logger.Info("Middleware executed BEFORE GLOBAL")
+	logger.Info("Middleware executed BEFORE GLOBAL.")
 
 	return ctx.Next()
 }
 
 func afterGlobal(ctx *atreugo.RequestCtx) error {
-	logger.Info("Middleware executed AFTER GLOBAL")
+	logger.Info("Middleware executed AFTER GLOBAL.")
 
 	return ctx.Next()
 }
 
 func beforeView(ctx *atreugo.RequestCtx) error {
-	logger.Info("Middleware executed BEFORE VIEW")
+	logger.Info("\tMiddleware executed BEFORE SPECIFIC VIEW @ " + string(ctx.Path()))
 
 	return ctx.Next()
 }
 
 func afterView(ctx *atreugo.RequestCtx) error {
-	logger.Info("Middleware executed AFTER VIEW")
+	logger.Info("\tMiddleware executed AFTER SPECIFIC VIEW @ " + string(ctx.Path()))
 
 	return ctx.Next()
 }

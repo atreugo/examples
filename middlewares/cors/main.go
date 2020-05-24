@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/atreugo/middlewares/cors"
+	"github.com/atreugo/cors"
 	"github.com/savsgio/atreugo/v11"
 )
 

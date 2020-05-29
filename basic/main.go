@@ -14,6 +14,10 @@ func main() {
 		return ctx.TextResponse("Hello World")
 	})
 
+	server.GET("/echo/{path:*}", func(ctx *atreugo.RequestCtx) error {
+		return ctx.TextResponse("Echo message: " + ctx.UserValue("path").(string))
+	})
+
 	v1 := server.NewGroupPath("/v1")
 	v1.GET("/", func(ctx *atreugo.RequestCtx) error {
 		return ctx.TextResponse("Hello V1 Group")

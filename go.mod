@@ -3,7 +3,7 @@ module github.com/atreugo/examples
 go 1.11
 
 require (
-	github.com/atreugo/cors v1.0.0
+	github.com/atreugo/cors v1.0.1
 	github.com/atreugo/session v0.0.0-20200617131217-3a1d052b886e
 	github.com/atreugo/websocket v1.0.4
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible

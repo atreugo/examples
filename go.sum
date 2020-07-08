@@ -104,8 +104,8 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/prometheus/client_model v0.0.0-20190812154241-14fe0d1b01d4/go.mod h1:xMI15A0UPsDsEKsMN9yxemIoYk6Tm2C1GtYGdfGttqA=
 github.com/savsgio/atreugo/v11 v11.3.3/go.mod h1:69uwxRbqaHBAcyVq+Ic2QwsyzkaJx9XGB+TEi5kMJk8=
-github.com/savsgio/atreugo/v11 v11.4.0 h1:yve24ohAG3RFf3guuzC8APuCdbvoqu1n1UGwWTKW5tM=
-github.com/savsgio/atreugo/v11 v11.4.0/go.mod h1:69uwxRbqaHBAcyVq+Ic2QwsyzkaJx9XGB+TEi5kMJk8=
+github.com/savsgio/atreugo/v11 v11.4.1 h1:F6WE89M+Nzs7EsJqZT3ZNiOo3sFpVKzNKwjAT/gMTz0=
+github.com/savsgio/atreugo/v11 v11.4.1/go.mod h1:69uwxRbqaHBAcyVq+Ic2QwsyzkaJx9XGB+TEi5kMJk8=
 github.com/savsgio/dictpool v0.0.0-20200608150529-6a3c1a8f6ab2 h1:V+VG/pzeMdwBlS21mJmNkBnQQmZWyuBgYRoz0SVxaVk=
 github.com/savsgio/dictpool v0.0.0-20200608150529-6a3c1a8f6ab2/go.mod h1:LTEdLD+Y+KR4yx9eRMIgciXZo4Od0doGWP/hjgfOlE0=
 github.com/savsgio/go-logger/v2 v2.0.1 h1:MgmsI5hnQFz0n5oX1Do/T9DldTo60guQTGwlRpzk0mk=

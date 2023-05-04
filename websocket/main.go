@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-
+	"time"
 	"github.com/atreugo/websocket"
 	"github.com/savsgio/atreugo/v11"
 )
@@ -24,6 +24,7 @@ func main() {
 	})
 
 	server.GET("/ws", upgrader.Upgrade(func(ws *websocket.Conn) error {
+		ws.SetReadDeadline(time.Now().Add(30 * time.Second))
 		for {
 			mt, message, err := ws.ReadMessage()
 			if err != nil {

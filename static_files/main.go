@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/savsgio/atreugo/v11"
-	"github.com/savsgio/go-logger/v2"
+	"github.com/savsgio/go-logger/v4"
 )
 
 var httpRespBody string = `

@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/golang-jwt/jwt/v4"
-	"github.com/savsgio/go-logger/v2"
+	"github.com/savsgio/go-logger/v4"
 )
 
 var jwtSignKey = []byte("TestForFasthttpWithJWT")
@@ -12,7 +12,7 @@ var jwtSignKey = []byte("TestForFasthttpWithJWT")
 type userCredential struct {
 	Username []byte `json:"username"`
 	Password []byte `json:"password"`
-	jwt.StandardClaims
+	jwt.RegisteredClaims
 }
 
 func generateToken(username []byte, password []byte) (string, time.Time) {
@@ -24,8 +24,8 @@ func generateToken(username []byte, password []byte) (string, time.Time) {
 	newToken := jwt.NewWithClaims(jwt.SigningMethodHS512, &userCredential{
 		Username: username,
 		Password: password,
-		StandardClaims: jwt.StandardClaims{
-			ExpiresAt: expireAt.Unix(),
+		RegisteredClaims: jwt.RegisteredClaims{
+			ExpiresAt: jwt.NewNumericDate(expireAt),
 		},
 	})
 

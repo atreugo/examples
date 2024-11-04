@@ -6,7 +6,7 @@ require (
 	github.com/atreugo/cors v1.0.7
 	github.com/atreugo/session v1.0.0-beta.5
 	github.com/atreugo/websocket v1.0.11
-	github.com/golang-jwt/jwt/v4 v4.5.0
+	github.com/golang-jwt/jwt/v4 v4.5.1
 	github.com/savsgio/atreugo/v11 v11.10.0
 	github.com/savsgio/go-logger/v4 v4.2.2
 	github.com/valyala/fasthttp v1.47.0

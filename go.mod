@@ -1,6 +1,6 @@
 module github.com/atreugo/examples
 
-go 1.20
+go 1.24
 
 require (
 	github.com/atreugo/cors v1.0.7
@@ -22,7 +22,7 @@ require (
 	github.com/fasthttp/websocket v1.5.3 // indirect
 	github.com/go-redis/redis/v8 v8.11.5 // indirect
 	github.com/go-sql-driver/mysql v1.7.1 // indirect
-	github.com/klauspost/compress v1.16.5 // indirect
+	github.com/klauspost/compress v1.18.7 // indirect
 	github.com/lib/pq v1.10.9 // indirect
 	github.com/mattn/go-sqlite3 v1.14.16 // indirect
 	github.com/philhofer/fwd v1.1.2 // indirect
